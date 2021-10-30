@@ -1,0 +1,7 @@
+@value makerGrey,makerGreen,makerWhite from '../../../common/color.css';
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

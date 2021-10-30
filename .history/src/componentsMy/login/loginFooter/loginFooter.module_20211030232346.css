@@ -1,0 +1,7 @@
+@value makerGrey,makerGreen,makerWhite from '../../../common/color.css';
+
+.loginFooter {
+  width: 100%;
+  color: makerWhite;
+  background-color: makerGreen;
+}

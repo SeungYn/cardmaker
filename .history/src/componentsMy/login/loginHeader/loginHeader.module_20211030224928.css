@@ -1,0 +1,5 @@
+import mediaQuery from '../../common/size.css'; 
+.footer {
+  display: flex;
+  flex-direction: column;
+}

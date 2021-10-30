@@ -1,0 +1,12 @@
+@value mediaQuery,makerGrey from '../../../common/size.css';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: makerGrey;
+}
+
+.img {
+  width: 50px;
+  height: 40px;
+}

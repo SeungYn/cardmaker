@@ -1,0 +1,6 @@
+@value makerLightGrey from '../../common/color.css';
+
+.broad {
+  width: 100%;
+  background-color: makerLightGrey;
+}

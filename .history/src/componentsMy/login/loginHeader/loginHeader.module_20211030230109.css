@@ -1,0 +1,13 @@
+@value makerGrey from '../../../common/color.css';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: makerGrey;
+  align-items: center;
+}
+
+.img {
+  width: 50px;
+  height: 40px;
+}

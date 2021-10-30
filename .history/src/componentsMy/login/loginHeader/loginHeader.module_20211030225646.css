@@ -1,0 +1,11 @@
+@value mediaQuery from '../../../common/size.css';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  width: 50px;
+  height: 30px;
+}

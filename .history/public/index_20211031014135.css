@@ -1,0 +1,9 @@
+body,
+html {
+  width: 100%;
+  border-color: black;
+}
+
+#root {
+  width: 100%;
+}

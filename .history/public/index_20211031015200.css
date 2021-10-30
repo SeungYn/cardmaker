@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+@value makerLightGrey from '/src/common/color.css';
+
+body,
+html {
+  width: 100%;
+  margin: 0;
+  background-color: makerLightGrey;
+}
+
+#root {
+  width: 100%;
+  background-color: makerLightGrey;
+}
