@@ -6,18 +6,18 @@ import Login from './components/login/login';
 import Maker from './components/maker/maker';
 function App({ authService }) {
   return (
-    <div className={styles.app}>
-      <BrowserRouter>
-        <Switch>
-          <Route path='/' exact>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/' exact>
+          <div className={styles.app}>
             <Login authService={authService} />
-          </Route>
-          <Route path='/maker'>
-            <Maker authService={authService} />
-          </Route>
-        </Switch>
-      </BrowserRouter>
-    </div>
+          </div>
+        </Route>
+        <Route path='/maker'>
+          <Maker />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

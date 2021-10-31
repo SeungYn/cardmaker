@@ -12,6 +12,7 @@
 .list {
   width: 100%;
   list-style: none;
+
   display: flex;
   flex-direction: column;
   padding: 0.2rem;
