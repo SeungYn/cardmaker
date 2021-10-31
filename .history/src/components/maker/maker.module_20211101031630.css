@@ -11,8 +11,8 @@
   flex: 1;
 }
 
-@media screen and (max-width: mediaQuery) {
-  .container {
+@media screen and (max-width: ) {
+  .cnotainer {
     flex-direction: column;
   }
 }
