@@ -1,0 +1,7 @@
+@value makerGreen from '../../coomon/color.css';
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 0.5em;
+  background-color: makerGreen;
+}

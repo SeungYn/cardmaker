@@ -1,0 +1,10 @@
+.login {
+  width: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list {
+  list-style: none;
+}
