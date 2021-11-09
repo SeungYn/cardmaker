@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from 'react';
+import { React, useEffect } from 'react';
 import { useHistory } from 'react-router';
 import Editor from '../editor/editor';
 import Footer from '../footer/footer';
@@ -17,29 +17,7 @@ const Maker = ({ authService }) => {
       email: 'ellie@gmail.com',
       message: 'go for it',
       fileName: 'ellie',
-      fileURL: null,
-    },
-    {
-      id: '2',
-      name: 'Ellie',
-      company: 'Samsung',
-      theme: 'colorful',
-      title: 'Software Engineer',
-      email: 'ellie@gmail.com',
-      message: 'go for it',
-      fileName: 'ellie',
-      fileURL: null,
-    },
-    {
-      id: '3',
-      name: 'Ellie',
-      company: 'Samsung',
-      theme: 'dark',
-      title: 'Software Engineer',
-      email: 'ellie@gmail.com',
-      message: 'go for it',
-      fileName: 'ellie',
-      fileURL: null,
+      fileURL: 'ellie.png',
     },
   ]);
   const history = useHistory();
@@ -58,8 +36,8 @@ const Maker = ({ authService }) => {
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor cards={cards} />
-        <Preview cards={cards} />
+        <Editor />
+        <Preview />
       </div>
       <Footer />
     </section>

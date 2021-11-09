@@ -23,7 +23,7 @@ const Maker = ({ authService }) => {
       id: '2',
       name: 'Ellie',
       company: 'Samsung',
-      theme: 'colorful',
+      theme: 'light',
       title: 'Software Engineer',
       email: 'ellie@gmail.com',
       message: 'go for it',

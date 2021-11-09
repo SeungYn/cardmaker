@@ -1,0 +1,30 @@
+@value makerShadow, makerBlack, makerWhite, makerColorful from '../../common/color.css';
+.card {
+  display: flex;
+  background-color: yellow;
+  border-radius: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.2em 0;
+  align-items: center;
+  box-shadow: 6px 6px 8px 0px makerShadow;
+  max-width: 30rem;
+}
+
+.card.dark {
+  background-color: makerBlack;
+  color: makerWhite;
+}
+
+.card.light {
+  background-color: makerWhite;
+  color: makerBlack;
+}
+
+.card.colorful {
+  background: makerColorful;
+}
+
+.avatar {
+  width: 10em;
+  height: 10em;
+}

@@ -2,9 +2,8 @@
 .editor {
   flex-basis: 50%;
   background-color: wheat;
-  border-right: 2px solid makerLightGrey;
-  padding: 0.5em 2em;
-}
+  border-right: 1px solid makerLightGrey
+
 .title {
   width: 100%;
   text-align: center;
