@@ -5,7 +5,7 @@ import NewEditForm from '../new_edit_form/new_edit_form';
 const Editor = ({ cards, addCard, updateCard, deleteCard }) => (
   <section className={styles.editor}>
     <h1 className={styles.title}>Card Maker</h1>
-    {Object.keys(cards).map((key) => {
+    {Object.keys(cards).cards.map((key) => {
       return (
         <Card_edit_form
           key={key}

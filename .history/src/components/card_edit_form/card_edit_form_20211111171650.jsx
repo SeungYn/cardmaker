@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Button from '../button/button';
 import ImageFileInput from '../image_file_input/image_file_input';
 import styles from './card_edit_form.module.css';
@@ -12,29 +12,16 @@ const Card_edit_form = ({ card, updateCard, deleteCard }) => {
   const emailRef = useRef();
   const messageRef = useRef();
   const formRef = useRef();
-  const onSubmit = () => {
-    deleteCard(card);
-  };
-  const onChange = (event) => {
-    if (event.currentTarget == null) {
-      return;
-    }
-    event.preventDefault();
-    updateCard({
-      ...card,
-      [event.currentTarget.name]: event.currentTarget.value,
-    });
-  };
-
+  const onSubmit = () => {};
+  c;
   return (
-    <form ref={formRef} className={styles.form}>
+    <form className={styles.form}>
       <input
         className={styles.input}
         type='text'
         name='name'
         value={name}
         onChange={onChange}
-        ref={nameRef}
       />
       <input
         className={styles.input}
@@ -42,14 +29,12 @@ const Card_edit_form = ({ card, updateCard, deleteCard }) => {
         name='company'
         value={company}
         onChange={onChange}
-        ref={companyRef}
       />
       <select
         className={styles.select}
         name='theme'
         value={theme}
         onChange={onChange}
-        ref={themeRef}
       >
         <option value='light'>light</option>
         <option value='dark'>Dark</option>
@@ -61,7 +46,6 @@ const Card_edit_form = ({ card, updateCard, deleteCard }) => {
         name='title'
         value={title}
         onChange={onChange}
-        ref={titleRef}
       />
       <input
         className={styles.input}
@@ -69,14 +53,12 @@ const Card_edit_form = ({ card, updateCard, deleteCard }) => {
         name='email'
         value={email}
         onChange={onChange}
-        ref={emailRef}
       />
       <textarea
         className={styles.textarea}
         name='message'
         value={message}
         onChange={onChange}
-        ref={messageRef}
       ></textarea>
       <div className={styles.fileInput}>
         <ImageFileInput />

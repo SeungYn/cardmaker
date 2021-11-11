@@ -12,9 +12,7 @@ const Card_edit_form = ({ card, updateCard, deleteCard }) => {
   const emailRef = useRef();
   const messageRef = useRef();
   const formRef = useRef();
-  const onSubmit = () => {
-    deleteCard(card);
-  };
+  const onSubmit = () => {};
   const onChange = (event) => {
     if (event.currentTarget == null) {
       return;
@@ -25,7 +23,6 @@ const Card_edit_form = ({ card, updateCard, deleteCard }) => {
       [event.currentTarget.name]: event.currentTarget.value,
     });
   };
-
   return (
     <form ref={formRef} className={styles.form}>
       <input

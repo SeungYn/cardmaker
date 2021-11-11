@@ -8,7 +8,7 @@ import styles from './maker.module.css';
 
 const Maker = ({ authService }) => {
   const [cards, setCards] = useState({
-    1: {
+    '1' :{
       id: '1',
       name: 'Ellie',
       company: 'Samsung',
@@ -18,45 +18,54 @@ const Maker = ({ authService }) => {
       message: 'go for it',
       fileName: 'ellie',
       fileURL: null,
-    },
-    2: {
-      id: '2',
-      name: 'Ellie',
-      company: 'Samsung',
-      theme: 'colorful',
-      title: 'Software Engineer',
-      email: 'ellie@gmail.com',
-      message: 'go for it',
-      fileName: 'ellie',
-      fileURL: null,
-    },
-    3: {
-      id: '3',
-      name: 'Ellie',
-      company: 'Samsung',
-      theme: 'dark',
-      title: 'Software Engineer',
-      email: 'ellie@gmail.com',
-      message: 'go for it',
-      fileName: 'ellie',
-      fileURL: null,
-    },
+    }
   });
 
-  const createOrUpdateCard = (card) => {
-    setCards((cards) => {
-      const updated = { ...cards };
-      updated[card.id] = card;
-      return updated;
-    });
+
+  {
+    id: '1',
+    name: 'Ellie',
+    company: 'Samsung',
+    theme: 'light',
+    title: 'Software Engineer',
+    email: 'ellie@gmail.com',
+    message: 'go for it',
+    fileName: 'ellie',
+    fileURL: null,
+  },
+  {
+    id: '2',
+    name: 'Ellie',
+    company: 'Samsung',
+    theme: 'colorful',
+    title: 'Software Engineer',
+    email: 'ellie@gmail.com',
+    message: 'go for it',
+    fileName: 'ellie',
+    fileURL: null,
+  },
+  {
+    id: '3',
+    name: 'Ellie',
+    company: 'Samsung',
+    theme: 'dark',
+    title: 'Software Engineer',
+    email: 'ellie@gmail.com',
+    message: 'go for it',
+    fileName: 'ellie',
+    fileURL: null,
+  },
+  const addCard = (card) => {
+    const add = [...cards, card];
+    setCards(add);
+  };
+
+  const updateCard = (card) => {
+    console.log(card);
   };
 
   const deleteCard = (card) => {
-    setCards((cards) => {
-      const updated = { ...cards };
-      delete updated[card.id];
-      return updated;
-    });
+    console.log(card);
   };
 
   const history = useHistory();
@@ -77,8 +86,8 @@ const Maker = ({ authService }) => {
       <div className={styles.container}>
         <Editor
           cards={cards}
-          addCard={createOrUpdateCard}
-          updateCard={createOrUpdateCard}
+          addCard={addCard}
+          updateCard={updateCard}
           deleteCard={deleteCard}
         />
         <Preview cards={cards} />

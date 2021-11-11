@@ -52,11 +52,7 @@ const Maker = ({ authService }) => {
   };
 
   const deleteCard = (card) => {
-    setCards((cards) => {
-      const updated = { ...cards };
-      delete updated[card.id];
-      return updated;
-    });
+    console.log(card);
   };
 
   const history = useHistory();
@@ -77,8 +73,8 @@ const Maker = ({ authService }) => {
       <div className={styles.container}>
         <Editor
           cards={cards}
-          addCard={createOrUpdateCard}
-          updateCard={createOrUpdateCard}
+          addCard={addCard}
+          updateCard={updateCard}
           deleteCard={deleteCard}
         />
         <Preview cards={cards} />
