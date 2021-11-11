@@ -8,7 +8,7 @@ const Editor = ({ cards, addCard }) => (
     {cards.map((card) => {
       return <Card_edit_form key={card.id} card={card} />;
     })}
-    <NewEditForm addCard={addCard} />
+    <NewEditForm />
   </section>
 );
 

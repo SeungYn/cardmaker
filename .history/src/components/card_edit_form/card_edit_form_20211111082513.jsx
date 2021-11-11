@@ -15,7 +15,7 @@ const Card_edit_form = ({ card }) => {
         name='company'
         value={company}
       />
-      <select className={styles.select} name='theme' value={theme}>
+      <select className={styles.select} name='theem' value={theme}>
         <option value='light'>light</option>
         <option value='dark'>Dark</option>
         <option value='colorful'>Colorful</option>

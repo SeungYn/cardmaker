@@ -44,8 +44,7 @@ const Maker = ({ authService }) => {
   ]);
 
   const addCard = (card) => {
-    const add = [...cards, card];
-    setCards(add);
+    console.log(card);
   };
 
   const history = useHistory();
@@ -64,7 +63,7 @@ const Maker = ({ authService }) => {
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor cards={cards} addCard={addCard} />
+        <Editor cards={cards} />
         <Preview cards={cards} />
       </div>
       <Footer />

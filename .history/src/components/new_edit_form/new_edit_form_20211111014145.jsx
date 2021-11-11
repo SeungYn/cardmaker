@@ -1,11 +1,6 @@
 import React from 'react';
-import Button from '../button/button';
-import ImageFileInput from '../image_file_input/image_file_input';
-import styles from './card_edit_form.module.css';
-const Card_edit_form = ({ card }) => {
-  const { name, title, company, email, message, theme, fileName, fileURL } =
-    card;
-  const onSubmit = () => {};
+import styles from './new_edit_form.module.css';
+const NewEditForm = (props) => {
   return (
     <form className={styles.form}>
       <input className={styles.input} type='text' name='name' value={name} />
@@ -15,7 +10,7 @@ const Card_edit_form = ({ card }) => {
         name='company'
         value={company}
       />
-      <select className={styles.select} name='theme' value={theme}>
+      <select className={styles.select} name='theem' value={theme}>
         <option value='light'>light</option>
         <option value='dark'>Dark</option>
         <option value='colorful'>Colorful</option>
@@ -35,4 +30,4 @@ const Card_edit_form = ({ card }) => {
   );
 };
 
-export default Card_edit_form;
+export default NewEditForm;
