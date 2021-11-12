@@ -32,7 +32,6 @@ const NewEditForm = ({ FileInput, addCard }) => {
       fileURL: file.fileURL || '',
     };
     form.current.reset();
-    setFile({ fileName: null, fileURL: null });
     addCard(card);
   };
 
@@ -79,7 +78,7 @@ const NewEditForm = ({ FileInput, addCard }) => {
         placeholder='Message'
       ></textarea>
       <div className={styles.fileInput}>
-        <FileInput name={file.fileName} onFileChange={onFileChange} />
+        <FileInput onFileChange={onFileChange} />
       </div>
       <Button name='Add' onClick={test} />
     </form>

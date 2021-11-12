@@ -14,7 +14,7 @@ const FileInput = (props) => (
 
 ReactDOM.render(
   <React.StrictMode>
-    <App authService={authService} FileInput={FileInput} />
+    <App authService={authService} />
   </React.StrictMode>,
   document.getElementById('root')
 );

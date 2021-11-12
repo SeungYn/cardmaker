@@ -9,14 +9,13 @@ const Editor = ({ FileInput, cards, addCard, updateCard, deleteCard }) => (
       return (
         <Card_edit_form
           key={key}
-          FileInput={FileInput}
           card={cards[key]}
           updateCard={updateCard}
           deleteCard={deleteCard}
         />
       );
     })}
-    <NewEditForm FileInput={FileInput} addCard={addCard} />
+    <NewEditForm addCard={addCard} />
   </section>
 );
 

@@ -32,7 +32,6 @@ const NewEditForm = ({ FileInput, addCard }) => {
       fileURL: file.fileURL || '',
     };
     form.current.reset();
-    setFile({ fileName: null, fileURL: null });
     addCard(card);
   };
 
