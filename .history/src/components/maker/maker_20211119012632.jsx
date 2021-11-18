@@ -14,7 +14,6 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
 
   const createOrUpdateCard = (card) => {
     setCards((cards) => {
-      console.log(cards);
       const updated = { ...cards };
       updated[card.id] = card;
       return updated;

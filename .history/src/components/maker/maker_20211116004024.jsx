@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from 'react';
-import { useHistory, useLocation } from 'react-router';
+import { useHistory } from 'react-router';
 import Editor from '../editor/editor';
 import Footer from '../footer/footer';
 import Header from '../header/header';
@@ -7,20 +7,16 @@ import Preview from '../preview/preview';
 import styles from './maker.module.css';
 
 const Maker = ({ FileInput, authService, cardRepository }) => {
-  const history = useHistory();
-  const historyState = history?.location?.state;
+  const historyState = useHistory().state;
   const [cards, setCards] = useState({});
   const [userId, setUserId] = useState(historyState && historyState.id);
 
   const createOrUpdateCard = (card) => {
     setCards((cards) => {
-      console.log(cards);
       const updated = { ...cards };
       updated[card.id] = card;
       return updated;
     });
-
-    cardRepository.saveCard(userId, card);
   };
 
   const deleteCard = (card) => {
@@ -29,28 +25,18 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       delete updated[card.id];
       return updated;
     });
-    cardRepository.removeCard(userId, card);
   };
 
+  const history = useHistory();
   const onLogout = () => {
     authService.logout();
   };
 
   useEffect(() => {
-    if (!userId) {
-      return;
-    }
-    const stopSync = cardRepository.syncCards(userId, (cards) => {
-      setCards(cards);
-    });
-
-    return () => stopSync();
-  }, [userId]);
-
-  useEffect(() => {
     authService.onAuthChange((user) => {
       if (user) {
-        setUserId(user.uid);
+        setUserId(user.id);
+        console.log(user.id);
       } else {
         history.push('/');
       }

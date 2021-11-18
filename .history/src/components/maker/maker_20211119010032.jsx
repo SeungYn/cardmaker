@@ -11,15 +11,14 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
   const historyState = history?.location?.state;
   const [cards, setCards] = useState({});
   const [userId, setUserId] = useState(historyState && historyState.id);
-
+  console.log(userId);
   const createOrUpdateCard = (card) => {
     setCards((cards) => {
-      console.log(cards);
       const updated = { ...cards };
       updated[card.id] = card;
       return updated;
     });
-
+    console.log(userId);
     cardRepository.saveCard(userId, card);
   };
 
@@ -29,23 +28,11 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       delete updated[card.id];
       return updated;
     });
-    cardRepository.removeCard(userId, card);
   };
 
   const onLogout = () => {
     authService.logout();
   };
-
-  useEffect(() => {
-    if (!userId) {
-      return;
-    }
-    const stopSync = cardRepository.syncCards(userId, (cards) => {
-      setCards(cards);
-    });
-
-    return () => stopSync();
-  }, [userId]);
 
   useEffect(() => {
     authService.onAuthChange((user) => {

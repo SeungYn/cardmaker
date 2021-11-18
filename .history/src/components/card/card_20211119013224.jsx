@@ -2,11 +2,9 @@ import React from 'react';
 import styles from './card.module.css';
 const DEFAULT_IMAGE = '/images/default_logo.png';
 const Card = ({ card }) => {
-  console.log(card, 0);
   const { name, title, company, email, message, theme, fileName, fileURL } =
     card;
   const url = fileURL || DEFAULT_IMAGE;
-  console.log(name, 1);
   return (
     <l1 className={`${styles.card} ${getStyles(theme)}`}>
       <img className={styles.avatar} src={url} alt='profil photo' />
@@ -30,6 +28,7 @@ function getStyles(theme) {
     case 'colorful':
       return styles.colorful;
     default:
+      console.log(theme, 1);
       throw new Error(`unknown theme: ${theme}`);
   }
 }
