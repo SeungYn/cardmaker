@@ -1,8 +1,8 @@
-import { firebaseAuth, googleProvider, githubProvider } from './firebase';
+import { firebaseAuth, googleProvider } from './firebase';
 class AuthService {
   login(providerName) {
-    const authProvider = this.getProvider(providerName);
-    return firebaseAuth.signInWithPopup(authProvider);
+    const authProvider = getProvider(providerName);
+    return firebaseApp.auth().signInWithPopup(authProvider);
   }
 
   logout() {

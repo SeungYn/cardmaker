@@ -8,7 +8,7 @@ const Card = ({ card }) => {
   console.log(name, 1);
   return (
     <l1 className={`${styles.card} ${getStyles(theme)}`}>
-      <img className={styles.avatar} src={url} alt='profil' />
+      <img className={styles.avatar} src={url} alt='profil photo' />
       <div className={styles.info}>
         <h1 className={styles.name}>{name}</h1>
         <p className={styles.company}>{company}</p>
