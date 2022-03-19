@@ -1,4 +1,4 @@
-import React, { useRef, useState, memo } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './image_file_input.module.css';
 const ImageFileInput = memo(({ imageUploader, name, onFileChange }) => {
   const [loading, setLoading] = useState(false); //로딩이 트루일때 스패너여줌

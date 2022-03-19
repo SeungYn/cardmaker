@@ -34,7 +34,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
 
   const onLogout = useCallback(() => {
     authService.logout();
-  }, [authService]);
+  });
 
   useEffect(() => {
     if (!userId) {
